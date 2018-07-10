@@ -1,7 +1,7 @@
 {
     "name": "ttek-plg/events",
     "type": "ttek-plugin",
-    "description": "TA plugin to manage events locations and dates",
+    "description": "A plugin to manage events locations and dates",
     "keywords":  [
         "tropotek",
         "plugin",
