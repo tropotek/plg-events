@@ -96,7 +96,7 @@ JS;
     /**
      * DomTemplate magic method
      *
-     * @return Template
+     * @return \Dom\Template
      */
     public function __makeTemplate()
     {
