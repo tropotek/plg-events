@@ -93,5 +93,58 @@ JS;
     }
 
 
+    /**
+     * DomTemplate magic method
+     *
+     * @return Template
+     */
+    public function __makeTemplate()
+    {
+        $xhtml = <<<HTML
+<div>
+
+<div class="container">
+    <div claas="event-list">
+
+      <div class="accordion" id="accordionExample">
+
+
+        <div class="card" repeat="card" var="card">
+          <div class="card-header" id="headingOne" var="card-header">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" var="button">
+                Collapsible Group Item #1
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample" var="collapse">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <iframe width="100%" height="450" frameborder="0" style="border:0" allowfullscreen="allowfullscreen" var="gmap"></iframe>
+
+                </div>
+                <div class="col-sm-6">
+                  <p><strong>Time: </strong> <span var="start">6:00pm</span> - <span var="end">8:00pm</span></p>
+                  <p><strong>Venue: </strong> <span var="address">Hinterland Hotel. 53 Station Street, Nerang, Qld 4211.</span></p>
+                  <p><strong>RSVP: </strong> <span var="rsvp">If you have any questions regarding this event please email safesodaevents@gmail.com</span></p>
+                  <div class="description" var="description"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+    
+</div>
+HTML;
+
+        return \Dom\Loader::load($xhtml);
+    }
 
 }
