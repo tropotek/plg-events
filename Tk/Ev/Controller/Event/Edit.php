@@ -1,5 +1,5 @@
 <?php
-namespace Tk\Ev\Controller\Admin\Event;
+namespace Tk\Ev\Controller\Event;
 
 use Tk\Request;
 use Dom\Template;
@@ -126,7 +126,7 @@ class Edit extends \Bs\Controller\AdminIface
         // Render the form
         $template->insertTemplate('form', $this->form->getRenderer()->show());
 
-        $template->appendJsUrl(\Tk\Uri::create('/plugin/events/Tk/Ev/Controller/Admin/Event/jquery.tkAddress.js'));
+        $template->appendJsUrl(\Tk\Uri::create('/plugin/events/Tk/Ev/Controller/Event/jquery.tkAddress.js'));
         // Add the script to make the address fields work together with the street autocomplete and map clicks
         $js = <<<JS
 jQuery(function ($) {

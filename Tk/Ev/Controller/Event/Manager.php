@@ -1,5 +1,5 @@
 <?php
-namespace Tk\Ev\Controller\Admin\Event;
+namespace Tk\Ev\Controller\Event;
 
 use Tk\Request;
 use Dom\Template;
