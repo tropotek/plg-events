@@ -36,7 +36,7 @@ class Listing extends \Bs\Controller\Iface
         $now = \Tk\Date::create();
         $now = \Tk\Date::floor($now);
 
-        $list = \App\Db\EventMap::create()->findFiltered(array(
+        $list = \Tk\Ev\Db\EventMap::create()->findFiltered(array(
             'dateStart' => $now
         ), \Tk\Db\Tool::create('a.dateStart', 35));
 
