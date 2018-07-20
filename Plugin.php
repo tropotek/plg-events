@@ -12,10 +12,6 @@ use Tk\Event\Dispatcher;
 class Plugin extends \Tk\Plugin\Iface
 {
 
-//    const ZONE_INSTITUTION = 'institution';
-//    const ZONE_COURSE_PROFILE = 'profile';
-//    const ZONE_COURSE = 'course';
-
     /**
      * A helper method to get the Plugin instance globally
      *
@@ -132,7 +128,7 @@ class Plugin extends \Tk\Plugin\Iface
      */
     public function getSettingsUrl()
     {
-        return \Tk\Uri::create('/eventsSettings.html');
+        return \Bs\Uri::createHomeUrl('/eventsSettings.html');
     }
 
 }
